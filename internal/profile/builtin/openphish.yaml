@@ -1,0 +1,13 @@
+name: openphish
+description: "OpenPhish community phishing URL feed - plain text, one URL per line"
+format: list
+
+columns:
+  - name: value
+    canonical: value
+    type_hint: url
+
+defaults:
+  source: openphish
+  tags: [phishing]
+  confidence: 60

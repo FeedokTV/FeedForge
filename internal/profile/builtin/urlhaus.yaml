@@ -1,0 +1,33 @@
+name: urlhaus
+description: "abuse.ch URLhaus CSV feed - recent URLs"
+format: csv
+
+columns:
+  - name: url
+    canonical: value
+    type_hint: url
+
+  - name: dateadded
+    canonical: first_seen
+    time_format: "2006-01-02 15:04:05"
+
+  - name: last_online
+    canonical: last_seen
+    time_format: "2006-01-02 15:04:05"
+
+  - name: threat
+    canonical: tags
+
+  - name: id
+    canonical: meta.urlhaus_id
+
+  - name: urlhaus_link
+    canonical: meta.urlhaus_link
+
+  - name: reporter
+    canonical: meta.reporter
+
+defaults:
+  source: urlhaus
+  tags: [malware_download]
+  confidence: 75

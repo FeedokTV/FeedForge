@@ -1,0 +1,12 @@
+name: generic-list
+description: "Generic plain-text feed - one IoC per line, type is auto-detected"
+format: list
+
+columns:
+  - name: value
+    canonical: value
+    type_hint: auto
+
+defaults:
+  source: generic-list
+  confidence: 50

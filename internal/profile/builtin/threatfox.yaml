@@ -1,0 +1,39 @@
+name: threatfox
+description: "abuse.ch ThreatFox CSV feed - malware IoCs"
+format: csv
+
+columns:
+  - name: ioc_value
+    canonical: value
+    type_hint: auto
+
+  - name: first_seen_utc
+    canonical: first_seen
+    time_format: "2006-01-02 15:04:05 UTC"
+
+  - name: last_seen_utc
+    canonical: last_seen
+    time_format: "2006-01-02 15:04:05 UTC"
+
+  - name: tags
+    canonical: tags
+
+  - name: ioc_id
+    canonical: meta.threatfox_id
+
+  - name: threat_type
+    canonical: meta.threat_type
+
+  - name: ioc_type
+    canonical: meta.ioc_type
+
+  - name: malware_printable
+    canonical: meta.malware
+
+  - name: reporter
+    canonical: meta.reporter
+
+defaults:
+  source: threatfox
+  tags: [malware]
+  confidence: 75

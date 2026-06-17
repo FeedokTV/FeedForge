@@ -1,0 +1,32 @@
+name: generic-csv
+description: "Generic CSV feed - expects a 'value' column; type is auto-detected"
+format: csv
+
+columns:
+  - name: value
+    canonical: value
+    type_hint: auto
+
+  - name: type
+    canonical: type
+
+  - name: source
+    canonical: source
+
+  - name: first_seen
+    canonical: first_seen
+    time_format: "2006-01-02T15:04:05Z"
+
+  - name: last_seen
+    canonical: last_seen
+    time_format: "2006-01-02T15:04:05Z"
+
+  - name: tags
+    canonical: tags
+
+  - name: confidence
+    canonical: confidence
+
+defaults:
+  source: generic-csv
+  confidence: 50
