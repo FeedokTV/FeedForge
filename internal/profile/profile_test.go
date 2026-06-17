@@ -10,11 +10,11 @@ func TestProfileLoadBuiltin(t *testing.T) {
 
 	got, err := profile.LoadBuiltin(builtinName)
 	if err != nil {
-		t.Errorf("unexpected error: %v", err)
+		t.Fatalf("unexpected error: %v", err)
 	}
 
 	if got == nil {
-		t.Errorf("got nil profile")
+		t.Fatal("got nil profile")
 	}
 
 	if got.Name != builtinName {
